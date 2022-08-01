@@ -14,23 +14,41 @@ import 'package:location/location.dart';
 class FirebaseFunction {
   final firebaseFirestore = FirebaseFirestore.instance;
   final firebaseUserId = FirebaseAuth.instance;
-  FirebaseMessaging messaging = FirebaseMessaging.instance;
+
   double? lat;
   double? lng;
   Location location = Location();
   LocationData? _locationData;
 
+  List testingCoodinates = [
+    {"lat": -1.24847, "long": 36.78191},
+    {"lat": -1.24852, "long": 36.78216},
+    {"lat": -1.24838, "long": 36.78244},
+    {"lat": -1.2487, "long": 36.78312},
+    {"lat": -1.24882, "long": 36.7843},
+    {"lat": -1.24892, "long": 36.7837},
+    {"lat": -1.24896, "long": 36.78397},
+    {"lat": -1.24911, "long": 36.78431},
+    {"lat": -1.24929, "long": 36.78461},
+    {"lat": -1.24954, "long": 36.78489},
+    {"lat": -1.24961, "long": 36.78495},
+    {"lat": -1.24985, "long": 36.78511},
+  ];
+
   void acessRegistrationToken(
       String bookingID, String uid, BuildContext context) async {
-    final fcmToken = await FirebaseMessaging.instance.getToken().then(
-        (values) => FirebaseFirestore.instance
-                .collection("tracking")
-                .doc(bookingID)
-                .update({
-              "driverToken": values,
-              'driverlat': lat,
-              'driverLng': lng
-            }).then((value) => changeProgress(values!, uid, context)));
+    final fcmToken = await FirebaseMessaging.instance.getToken().then((values) {
+      for (var i = 0; testingCoodinates.length > i; i++) {
+        FirebaseFirestore.instance
+            .collection("tracking")
+            .doc("ni6E5jZty8XXe67Cqo3sKWdKvIg2-booking-1659202411390")
+            .update({
+          "driverToken": values,
+          'driverLng': testingCoodinates[i]['lat'],
+          'driverLng': testingCoodinates[i]['long']
+        }).then((value) => changeProgress(values!, uid, context));
+      }
+    });
     FirebaseMessaging.instance.onTokenRefresh.listen((fcmToken) {
       FirebaseFirestore.instance
           .collection("driverToken")

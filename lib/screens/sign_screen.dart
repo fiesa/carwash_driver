@@ -167,7 +167,7 @@ class _SignScreenState extends State<SignScreen> {
                                   // shape: RoundedRectangleBorder(
                                   //     borderRadius: BorderRadius.circular(7.0)),
                                   style: ElevatedButton.styleFrom(
-                                    backgroundColor: Colors.deepOrange,
+                                    primary: Colors.orangeAccent,
                                   ),
                                   onPressed: () async {
                                     try {

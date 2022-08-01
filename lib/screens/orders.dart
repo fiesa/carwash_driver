@@ -5,6 +5,7 @@ import 'package:flutter3_firestore_driver/main_variables/main_variables.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter3_firestore_driver/map/my_map.dart';
 import 'package:flutter3_firestore_driver/screens/order_details.dart';
 import 'package:provider/provider.dart';
 import 'package:smooth_star_rating_nsafe/smooth_star_rating.dart';
@@ -19,6 +20,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 import '../widgets/radiant_gradient_mask.dart';
+import 'package:location/location.dart';
 
 class Orders extends StatefulWidget {
   Orders({Key? key}) : super(key: key);
@@ -122,11 +124,28 @@ class _OrdersState extends State<Orders> {
               itemCount: snapshot.data!.docs.length,
               itemBuilder: (BuildContext context, int index) {
                 return InkWell(
-                  onTap: () => FirebaseFunction().getCurrentLocation(
-                      snapshot.data!.docs[index]['uid'],
-                      snapshot.data!.docs[index]['uid'],
-                      context,
-                      snapshot.data!.docs[index]['clientToken']),
+                  onTap: () {
+                    // addDriverLocation();
+                    // FirebaseFunction().getCurrentLocation(
+                    //   snapshot.data!.docs[index]['uid'],
+                    //   snapshot.data!.docs[index]['uid'],
+                    //   context,
+                    //   snapshot.data!.docs[index]['clientToken'],
+                    // );
+
+                    FirebaseFunction().acessRegistrationToken("bookingID",
+                        snapshot.data!.docs[index]['uid'], context);
+                    // Navigator.of(context).push(
+                    //   MaterialPageRoute(
+                    //     builder: (context) => MyMap(_userId.toString()),
+                    //   ),
+                    // );
+                  },
+                  // onTap: (() => Navigator.of(context).push(
+                  //       MaterialPageRoute(
+                  //         builder: (context) => MyMap(_userId.toString()),
+                  //       ),
+                  //     )),
                   child: Container(
                     padding: EdgeInsets.symmetric(vertical: 20),
                     margin: EdgeInsets.symmetric(horizontal: 10, vertical: 15),
@@ -225,5 +244,13 @@ class _OrdersState extends State<Orders> {
         },
       ),
     );
+  }
+
+  Future<void> addDriverLocation() async {
+    final locationResult = await Location().getLocation();
+    FirebaseFirestore.instance.collection('driverLocation').doc().set({
+      'lat': -1.24847,
+      'lng': 36.78191,
+    }, SetOptions(merge: true));
   }
 }

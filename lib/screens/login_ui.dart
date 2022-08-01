@@ -29,18 +29,16 @@ class _LoginUIState extends State<LoginUI> {
               backgroundColor: Colors.grey.shade200,
               body: SingleChildScrollView(
                 child: Container(
-
-          // decoration: BoxDecoration(
-          //   gradient: LinearGradient(
-          //     begin: Alignment.topRight,
-          //     end: Alignment.bottomLeft,
-          //     colors: [
-          //       Colors.black,
-          //       Colors.blue,
-          //     ],
-          //   )
-          // ),
-
+                  // decoration: BoxDecoration(
+                  //   gradient: LinearGradient(
+                  //     begin: Alignment.topRight,
+                  //     end: Alignment.bottomLeft,
+                  //     colors: [
+                  //       Colors.black,
+                  //       Colors.blue,
+                  //     ],
+                  //   )
+                  // ),
 
                   color: Colors.black,
                   padding: EdgeInsets.all(20),
@@ -48,11 +46,11 @@ class _LoginUIState extends State<LoginUI> {
                     children: [
                       Padding(
                         padding: const EdgeInsets.only(top: 100.0),
-                        child: Image.asset(
-                          'images/logo.png',
-                          height: 200,
-                          width: 350,
-                        ),
+                        // child: Image.asset(
+                        //   'images/logo.png',
+                        //   height: 200,
+                        //   width: 350,
+                        // ),
                       ),
                       // Container(
                       //   //alignment: Alignment.center, // use aligment
@@ -263,17 +261,16 @@ class _LoginUIState extends State<LoginUI> {
             ),
             SizedBox(height: 20),
             Container(
-
-          //               decoration: BoxDecoration(
-          //   gradient: LinearGradient(
-          //     begin: Alignment.topRight,
-          //     end: Alignment.bottomLeft,
-          //     colors: [
-          //       Colors.blue,
-          //       Colors.green,
-          //     ],
-          //   )
-          // ),
+              //               decoration: BoxDecoration(
+              //   gradient: LinearGradient(
+              //     begin: Alignment.topRight,
+              //     end: Alignment.bottomLeft,
+              //     colors: [
+              //       Colors.blue,
+              //       Colors.green,
+              //     ],
+              //   )
+              // ),
 
               width: double.infinity,
               child: ElevatedButton(

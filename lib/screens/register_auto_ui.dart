@@ -190,9 +190,9 @@ class _RegisterAutoUIState extends State<RegisterAutoUI> {
                               child: ElevatedButton(
                                 // shape: RoundedRectangleBorder(
                                 //     borderRadius: BorderRadius.circular(7.0)),
-                                style: ElevatedButton.styleFrom(
-                                  backgroundColor: Colors.orangeAccent,
-                                ),
+                                // style: ElevatedButton.styleFrom(
+                                //   backgroundColor: Colors.orangeAccent,
+                                // ),
                                 onPressed: () async {
                                   // widget.toggleView();
 

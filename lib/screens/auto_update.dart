@@ -323,7 +323,10 @@ class _AutoUpdateState extends State<AutoUpdate> {
                         // shape: RoundedRectangleBorder(
                         //     borderRadius: BorderRadius.circular(7.0)),
                         style: ElevatedButton.styleFrom(
-                            backgroundColor: Colors.orangeAccent),
+                            // backgroundColor: Colors.orangeAccent
+                          primary: Colors.orangeAccent,
+
+                        ),
                         onPressed: () async {
                           var currentUser = FirebaseAuth.instance.currentUser;
 

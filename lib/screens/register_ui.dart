@@ -231,7 +231,7 @@ class _RegisterUIState extends State<RegisterUI> {
                                 // shape: RoundedRectangleBorder(
                                 //     borderRadius: BorderRadius.circular(7.0)),
                                 style: ElevatedButton.styleFrom(
-                                  backgroundColor: Colors.orangeAccent,
+                                  primary: Colors.orangeAccent,
                                 ),
                                 onPressed: () async {
                                   // widget.toggleView();

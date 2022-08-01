@@ -144,7 +144,9 @@ class _RegisterAutoState extends State<RegisterAuto> {
                                 // shape: RoundedRectangleBorder(
                                 //     borderRadius: BorderRadius.circular(7.0)),
                                 style: ElevatedButton.styleFrom(
-                                  backgroundColor: Colors.orangeAccent,
+                                  primary: Colors.orangeAccent,
+                                  // backgroundColor: Colors.orangeAccent,
+
                                 ),
                                 onPressed: () async {
                                   // widget.toggleView();

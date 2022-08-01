@@ -371,39 +371,35 @@ class _HomeScreenState extends State<HomeScreen> {
                   },
                 )
               : Container(
-                          decoration: BoxDecoration(
-            gradient: LinearGradient(
-              begin: Alignment.topRight,
-              end: Alignment.bottomLeft,
-              colors: [
-                Colors.black,
-                Colors.blue,
-              ],
-            )
-          ),
+                  decoration: BoxDecoration(
+                      gradient: LinearGradient(
+                    begin: Alignment.topRight,
+                    end: Alignment.bottomLeft,
+                    colors: [
+                      Colors.black,
+                      Colors.blue,
+                    ],
+                  )),
                   // color: Colors.black,
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       SizedBox(),
-                      Lottie.asset('images/splash.json'),
-          //             Container(
+                      // Lottie.asset('images/splash.json'),
+                      //             Container(
 
-          //                           decoration: BoxDecoration(
-          //   gradient: LinearGradient(
-          //     begin: Alignment.topRight,
-          //     end: Alignment.bottomLeft,
-          //     colors: [
-          //     Color(0xff3fa0d7),
-          //     Color(0xff29ee86),
-          //   ],
-          //   )
-          // ),
+                      //                           decoration: BoxDecoration(
+                      //   gradient: LinearGradient(
+                      //     begin: Alignment.topRight,
+                      //     end: Alignment.bottomLeft,
+                      //     colors: [
+                      //     Color(0xff3fa0d7),
+                      //     Color(0xff29ee86),
+                      //   ],
+                      //   )
+                      // ),
 
-
-
-
-          //               child:
+                      //               child:
                       Padding(
                         padding: const EdgeInsets.all(15.0),
                         child: SwipeableButtonView(

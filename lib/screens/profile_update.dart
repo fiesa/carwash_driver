@@ -307,7 +307,8 @@ class _UpdateProfileState extends State<UpdateProfile> {
                         // shape: RoundedRectangleBorder(
                         //     borderRadius: BorderRadius.circular(7.0)),
                         style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.orangeAccent,
+                          primary: Colors.orangeAccent,
+                          // backgroundColor: Colors.orangeAccent,
                         ),
                         onPressed: () async {
                           var currentUser = FirebaseAuth.instance.currentUser;

@@ -158,7 +158,10 @@ class _RegisterState extends State<Register> {
                                 // shape: RoundedRectangleBorder(
                                 //     borderRadius: BorderRadius.circular(7.0)),
                                 style: ElevatedButton.styleFrom(
-                                    backgroundColor: Colors.deepOrange),
+                                    primary: Colors.deepOrange,
+                                ),
+
+                                    // backgroundColor: Colors.deepOrange),
                                 onPressed: () async {
                                   // widget.toggleView();
 

@@ -69,8 +69,9 @@ dependencies:
   get:
   localization:
   equatable: 
-  location: ^2.0.0
+  location: 
   geocoding: ^2.0.1
+  cloud_firestore: 
   
 
 dev_dependencies:
@@ -97,8 +98,11 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
+    - assets/images/
     - assets/images/imgs/
     - assets/images/placeholder/
+    
+    - assets/
     - music/
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
