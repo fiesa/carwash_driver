@@ -126,15 +126,19 @@ class _OrdersState extends State<Orders> {
                 return InkWell(
                   onTap: () {
                     // addDriverLocation();
-                    // FirebaseFunction().getCurrentLocation(
-                    //   snapshot.data!.docs[index]['uid'],
-                    //   snapshot.data!.docs[index]['uid'],
-                    //   context,
-                    //   snapshot.data!.docs[index]['clientToken'],
-                    // );
+                    FirebaseFunction().getCurrentLocation(
+                      snapshot.data!.docs[index]['uid'],
+                      snapshot.data!.docs[index]['uid'],
+                      context,
+                      snapshot.data!.docs[index]['clientToken'],
+                    );
 
-                    FirebaseFunction().acessRegistrationToken("bookingID",
+                    FirebaseFunction().acessRegistrationToken(
                         snapshot.data!.docs[index]['uid'], context);
+                    FirebaseFunction().changeProgress(
+                        "d5b-eTUIRlyIkXX-V48r6a:APA91bGd6W2U8rvDGZjIt3jLv6Bi7wuiy72VmFD0hXb-T54DMIRWS7pjl4UV6KVfEgDBhtwHEUcksLQ8Zv9vd5yn-elHZLN806-5DDT0oKggVsjKbrqpebe0yzY_jd7oq2Or01uzGVUz",
+                        snapshot.data!.docs[index]['uid'],
+                        context);
                     // Navigator.of(context).push(
                     //   MaterialPageRoute(
                     //     builder: (context) => MyMap(_userId.toString()),
