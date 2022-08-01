@@ -1,5 +1,5 @@
 import 'package:flutter3_firestore_driver/screens/home.dart';
-import 'package:flutter3_firestore_driver/screens/maps.dart';
+import 'package:flutter3_firestore_driver/map/my_map.dart';
 import 'package:flutter3_firestore_driver/screens/orders.dart';
 import 'package:flutter3_firestore_driver/screens/wallets.dart';
 import 'package:flutter/material.dart';
@@ -79,9 +79,8 @@ class _TabsScreenState extends State<TabsScreen> {
             icon: Icon(Icons.folder_special),
             label: "Bookings",
           ),
-                    BottomNavigationBarItem(
-              icon: Icon(Icons.person_search_sharp), 
-              label: "Profile"),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.person_search_sharp), label: "Profile"),
           // BottomNavigationBarItem(
           //   icon: Icon(Icons.map),
           // ),
